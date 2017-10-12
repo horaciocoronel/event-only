@@ -1,1 +1,7 @@
 events#show page
+<h1><%= @event.name %></h1>
+<h2><%= @event.date %></h2>
+<h3><%= @event.capacity %></h3>
+<h4><%= @event.city %></h4>
+
+<%= render 'events', event: @event %>
