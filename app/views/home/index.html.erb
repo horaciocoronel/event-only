@@ -5,3 +5,13 @@
 <p>
   <%= link_to 'Events', events_path %>
 </p>
+<p>
+  <% @locations.each do |location| %>
+  <%= render 'locations/single_location', location: location %>
+  <% end %>
+</p>
+<p>
+  <% @events.each do |event| %>
+  <%= render 'events/events', event: event %>
+  <% end %>
+</p>
