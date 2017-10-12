@@ -1,8 +1,12 @@
 <h1>EventOnly</h1>
-
-<% @locations.each do |current_location| %>
-<%= render 'single_location', location: current_location %>
-  <% end %>
 <p>
   <%= link_to 'New Location', new_location_path %>
 </p>
+
+<% @locations.each do |current_location| %>
+<%= render 'single_location', location: current_location %>
+
+<h2>Edit <%= current_location.name %></h2>
+<%= render 'location_form', location: current_location %>
+
+  <% end %>
